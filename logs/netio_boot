@@ -1,0 +1,428 @@
+U-Boot 1.1.3 (Nov 15 2013 - 14:58:27)
+                                     
+Board: Ralink APSoC DRAM:  128 MB
+relocate_code Pointer at: 87f78000
+enable ephy clock...done. rf reg 29 = 5
+SSC disabled.                          
+spi_wait_nsec: 29 
+spi device id: 20 20 13 10 0 (20131000)
+find flash: M25P40                     
+raspi_read: from:30000 len:1000 
+raspi_read: from:30000 len:1000 
+invalid start sequence in message form cpu
+============================================ 
+Ralink UBoot Version: 4.1.1.0                
+-------------------------------------------- 
+ASIC 7620_MP (Port5<->None)                  
+DRAM component: 1024 Mbits DDR, width 16
+DRAM bus: 16 bit                        
+Total memory: 128 MBytes
+Flash component: SPI Flash
+Date:Nov 15 2013  Time:14:58:27
+============================================ 
+icache: sets:512, ways:4, linesz:32 ,total:65536
+dcache: sets:256, ways:4, linesz:32 ,total:32768 
+                                                 
+ ##### The CPU freq = 580 MHZ #### 
+ estimate memory size =128 Mbytes  
+                                 
+Please choose the operation: 
+   1: Load system code to SDRAM via TFTP. 
+   2: Load system code then write to Flash via TFTP. 
+   3: Boot system code via Flash (default).          
+   4: Entr boot command line interface.    
+   5: Boot system code via MMC.        
+   6: Load system code then write to MMC via TFTP. 
+   9: Load Boot Loader code then write to Flash via TFTP.                                                                                                                                                                                                               0 
+raspi_read: from:40028 len:6                                                                                                                                                                                                                                             
+                             
+   5: Boot system code via MMC.
+[SD0] Bus Width: 1             
+[SD0] SET_CLK(260kHz): SCLK(255kHz) MODE(0) DDR(0) DIV(47) DS(1) RS(1)
+[SD0] Switch to High-Speed mode!                                      
+[SD0] SET_CLK(260kHz): SCLK(255kHz) MODE(0) DDR(0) DIV(47) DS(1) RS(1)
+[SD0] Bus Width: 4                                                    
+[SD0] Size: 3728 MB, Max.Speed: 52000 kHz, blklen(512), nblks(7634944), ro(2)
+[SD0] Initialized                                                            
+[SD0] SET_CLK(48000kHz): SCLK(48000kHz) MODE(1) DDR(0) DIV(0) DS(1) RS(1)
+Loading kernel information from MMC: kernel name: Linux-2.6.36+, size : 0x17aeae
+Loading kernel image from MMC                                                   
+...............................
+Kernel image loaded            
+## Booting image at 80a00000 ...
+   Image Name:   Linux-2.6.36+  
+   Image Type:   MIPS Linux Kernel Image (gzip compressed)
+   Data Size:    1552046 Bytes =  1.5 MB                  
+   Load Address: 80000000               
+   Entry Point:  8000c310
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... OK
+No initrd                           
+## Transferring control to Linux (at address 8000c310) ...
+## Giving linux memsize in MB, 128                        
+                                  
+Starting kernel ...
+                   
+Linux version 2.6.36+ (snupa3am@e6400) (gcc version 3.4.2) #1 Thu Jun 12 13:50:27 CEST 2014
+
+ The CPU feqenuce set to 580 MHz
+
+ MIPS CPU sleep mode enabled.
+ PCIE: bypass PCIe DLL.
+ PCIE: Elastic buffer control: Addr:0x68 -> 0xB4
+ disable all power about PCIe
+CPU revision is: 00019650 (MIPS 24Kc)
+Determined physical RAM map:
+ memory: 08000000 @ 00000000 (usable)
+Initrd not found or empty - disabling initrd
+Zone PFN ranges:
+  Normal   0x00000000 -> 0x00008000
+Movable zone start PFN for each node
+early_node_map[1] active PFN ranges
+    0: 0x00000000 -> 0x00008000
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+Kernel command line: netio4gpio.defaultLedState=0,1,0,1,0,1,0,1 panic=1 console=ttyS1,57600n8 rootdelay=2 root=/dev/mmcblk0p2
+PID hash table entries: 512 (order: -1, 2048 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+Writing ErrCtl register=0006577f
+Readback ErrCtl register=0006577f
+Memory: 126280k/131072k available (2647k kernel code, 4792k reserved, 588k data, 168k init, 0k highmem)
+NR_IRQS:128
+MTK/Ralink System Tick Counter init... cd:80319d68, m:214748, s:32
+console [ttyS1] enabled
+Calibrating delay loop... 386.04 BogoMIPS (lpj=772096)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+devtmpfs: initialized
+NET: Registered protocol family 16
+bio: create slab <bio-0> at 0
+SCSI subsystem initialized
+i2c-gpio i2c-gpio.0: using pins 1 (SDA) and 2 (SCL)
+Switching to clocksource Ralink external timer
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+TCP: Hash tables configured (established 4096 bind 4096)
+TCP reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+msgmni has been set to 246
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered (default)
+netio4gpio: loading
+netio4gpio: update to defaultLedState 
+netio4gpio: module loaded
+spidrv_major = 217
+Serial: 8250/16550 driver, 2 ports, IRQ sharing disabled
+serial8250: ttyS0 at MMIO 0x10000500 (irq = 37) is a 16550A
+serial8250: ttyS1 at MMIO 0x10000c00 (irq = 12) is a 16550A
+brd: module loaded
+loop: module loaded
+deice id : 20 20 13 10 0 (20131000)
+M25P40(20 20131000) (512 Kbytes)
+mtd .name = raspi, .size = 0x00080000 (0M) .erasesize = 0x00000000 (0K) .numeraseregions = 65536
+Creating 6 MTD partitions on "raspi":
+0x000000000000-0x000000080000 : "ALL"
+0x000000000000-0x000000030000 : "Bootloader"
+0x000000030000-0x000000040000 : "Config"
+0x000000040000-0x000000050000 : "Factory"
+0x000000050000-0x000000090000 : "platform"
+mtd: partition "platform" extends beyond the end of device "raspi" -- size truncated to 0x30000
+0x000000080000-0x000000080000 : "empty"
+mtd: partition "empty" is out of reach -- disabled
+ps: can't get major 253
+SMACCR1 -- : 0x000024a4
+SMACCR0 -- : 0x2c3317a2
+Ralink APSoC Ethernet Driver Initilization. v3.0  256 rx/tx descriptors allocated, mtu = 1500!
+SMACCR1 -- : 0x000024a4
+SMACCR0 -- : 0x2c3317a2
+PROC INIT OK!
+rtc-mcp7940 0-006f: SET TIME!
+rtc-mcp7940 0-006f: rtc core: registered mcp7940 as rtc0
+rtc-mcp7940 0-006f: 64 bytes nvram
+i2c /dev entries driver
+Ralink APSoC Hardware Watchdog Timer
+MTK MSDC device init.
+mtk-sd: MediaTek MT6575 MSDC Driver
+nf_conntrack version 0.5.0 (1973 buckets, 7892 max)
+IPVS: Registered protocols ()
+IPVS: Connection hash table configured (size=4096, memory=32Kbytes)
+IPVS: ipvs loaded.
+GRE over IPv4 demultiplexor driver
+ip_tables: (C) 2000-2006 Netfilter Core Team, Type=Restricted Cone
+TCP cubic registered
+NET: Registered protocol family 17
+rtc-mcp7940 0-006f: setting system clock to 2001-01-01 00:00:00 UTC (978307200)
+Waiting 2sec before mounting root device...
+msdc0 -> ================ <- msdc_set_mclk() : L<651> PID<kworker/u:0><0x5>
+msdc0 -> !!! Set<400KHz> Source<48000KHz> -> sclk<400KHz> <- msdc_set_mclk() : L<652> PID<kworker/u:0><0x5>
+msdc0 -> ================ <- msdc_set_mclk() : L<653> PID<kworker/u:0><0x5>
+msdc0 -> XXX CMD<52> MSDC_INT_CMDTMO <- msdc_irq() : L<2411>
+msdc0 -> XXX CMD<52> MSDC_INT_CMDTMO <- msdc_irq() : L<2411>
+msdc0 -> XXX CMD<8> MSDC_INT_CMDTMO <- msdc_irq() : L<2411>
+msdc0 -> XXX CMD<5> MSDC_INT_CMDTMO <- msdc_irq() : L<2411>
+msdc0 -> XXX CMD<5> MSDC_INT_CMDTMO <- msdc_irq() : L<2411>
+msdc0 -> XXX CMD<5> MSDC_INT_CMDTMO <- msdc_irq() : L<2411>
+msdc0 -> XXX CMD<5> MSDC_INT_CMDTMO <- msdc_irq() : L<2411>
+msdc0 -> XXX CMD<55> MSDC_INT_CMDTMO <- msdc_irq() : L<2411>
+msdc0 -> XXX CMD<55> MSDC_INT_CMDTMO <- msdc_irq() : L<2411>
+msdc0 -> XXX CMD<55> MSDC_INT_CMDTMO <- msdc_irq() : L<2411>
+msdc0 -> XXX CMD<55> MSDC_INT_CMDTMO <- msdc_irq() : L<2411>
+msdc0 -> SD data latch edge<1> <- msdc_ops_set_ios() : L<2207> PID<kworker/u:0><0x5>
+msdc0 -> ================ <- msdc_set_mclk() : L<651> PID<kworker/u:0><0x5>
+msdc0 -> !!! Set<48000KHz> Source<48000KHz> -> sclk<48000KHz> <- msdc_set_mclk() : L<652> PID<kworker/u:0><0x5>
+msdc0 -> ================ <- msdc_set_mclk() : L<653> PID<kworker/u:0><0x5>
+mmc0: new high speed MMC card at address 0001
+mmcblk0: mmc0:0001 H4G1d 3.64 GiB 
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8
+VFS: Mounted root (cramfs filesystem) readonly on device 179:2.
+Freeing unused kernel memory: 168k freed
+Algorithmics/MIPS FPU Emulator v1.5
+Importing enviroment variables
+export HAS_BADBLOCKS=1
+export APP_NAME='Netio4'
+export VENDOR='Koukaam'
+export UPDATES_WEB='update.netio-products.com'
+export VENDOR_WEB='koukaam.se'
+export PRODUCT_WEB='netio-products.com'
+export HW_PLATFORM='netio4'
+export MAX_DISK=-1
+export HAS_BROKEN_TMPFS=1
+export HAS_DHCPC_LED=1
+export HAS_UPGRADE_FW_LED=1
+export DISABLE_SW_POWEROFF=1
+export HAS_EMMC_FLASH=1
+export HAS_NOR_FLASH=1
+export HAS_EXT_FOUR=1
+export HAS_WIFI=1
+export HAS_ETH_BRIDGE=1
+*>>> IPCorderOS, v1.1.0,flashmode loader starting...
+*>>> IPCorderOS is distributed under GPL licence
+*>>> as support OS for the IPCorder application
+
+>>> System init..
+ *> Hardware pre-init
+/bin/set_led_status: line 10: /etc/leds.conf: No such file or directory
+/bin/set_timed_led_status: line 7: /tmp/led.status: Read-only file system
+ *> Setting loglevel
+ *> Mounting /proc...
+ *> Mounting /sys...
+ *> Initializing interfaces...
+ *> Creating /dev and /dev/shm...
+ *> Linking device links
+  **> system: /dev/mmcblk0p3; 
+etc: /dev/mmcblk0p5; 
+ipcorder: /dev/mmcblk0p4; 
+loader: /dev/mmcblk0p2; 
+zImage: !
+uImage: /dev/mmcblk0p1; 
+platform: /dev/mtd4; 
+child: !
+child_kernel: !
+child_loader: !
+child_system: !
+
+ *> Preparing platform data ...
+ *> Preparing /tmp ...
+ *> Preparing /var ...
+ *> Starting sysconfig ...
+vm.vfs_cache_pressure = 300
+vm.min_free_kbytes = 6000
+vm.swappiness = 1
+ *> Hardware init
+>>> System initialized.
+Starting localtime
+Starting disk Management...
+Testing reset button...
+Checking new root consistency
+Stopping disk Management...
+>>> Bringing down system services..
+ *> Stopping service updateLeds: 
+    **> Success
+ *> Stopping service crond: 
+    **> Success
+ *> Stopping service sshd: 
+    **> Success
+ *> Stopping service discover: 
+    **> Success
+ *> Stopping service network: 
+    **> Success
+ *> Stopping service bridge: 
+    **> Success
+ *> Stopping service net.ra0: 
+    **> Success
+ *> Stopping service net.eth2: 
+    **> Success
+ *> Stopping service net.lo: 
+    **> Success
+ *> Stopping service diskManagement: 
+    **> Success
+ *> Stopping service hostname: 
+    **> Success
+ *> Stopping service localtime: 
+    **> Success
+>>> All services down.
+>>> System halting..
+ *> Hardware pre-halt
+ *> Unmounting /dev/shm...
+ *> Unmounting /platform...
+ *> Unmounting /proc.. *> Unmounting /sys...
+ *> Stopping /sysconfig...
+ *> Dumping /tmp...
+ *> Dumping /var...
+ *> Unmounting /etc...
+ *> Hardware halt
+>>> IPCorderOS, v1.1.0 terminated.
+
+* IPCorder loader finished
+* passing control...
+
+INIT: version 2.88 booting
+*>>> IPCorderOS, v1.1.0, system starting...
+*>>> IPCorderOS is distributed under GPL licence
+*>>> as support OS for the IPCorder application
+
+>>> System init..
+ *> Hardware pre-init
+/bin/set_led_status: line 10: /etc/leds.conf: No such file or directory
+/bin/set_timed_led_status: line 7: /tmp/led.status: Read-only file system
+ *> Setting loglevel
+ *> Mounting /proc...
+ *> Mounting /sys...
+ *> Initializing interfaces...
+ *> Creating /dev and /dev/shm...
+ *> Linking device links
+  **> system: /dev/mmcblk0p3; 
+etc: /dev/mmcblk0p5; 
+ipcorder: /dev/mmcblk0p4; 
+loader: /dev/mmcblk0p2; 
+zImage: !
+uImage: /dev/mmcblk0p1; 
+platform: /dev/mtd4; 
+child: !
+child_kernel: !
+child_loader: !
+child_system: !
+
+ *> Preparing platform data ...
+ *> Preparing /tmp ...
+ *> Preparing /var ...
+ *> Starting sysconfig ...
+vm.vfs_cache_pressure = 300
+vm.min_free_kbytes = 6000
+vm.swappiness = 1
+ *> Hardware init
+>>>>>> Starting system services..
+ *> Starting service localtime: 
+    **> Success
+ *> Starting service post-install: 
+    **> Success
+ *> Starting service hostname: 
+    **> Success
+ *> Starting service syslog-ng: 
+    **> Success
+ *> Starting service mount_ipcorder: 
+    **> Success
+ *> Starting service netio_daemon: 
+    **> Success
+ *> Starting service diskManagement: 
+    **> Success
+ *> Starting service bind_ipcorder: 
+    **> Success
+ *> Starting service persist_log: 
+    **> Success
+ *> Starting service cleanup_upgrade: 
+    **> Success
+ *> Starting service net.lo: 
+    **> Success
+ *> Starting service net.eth2: 
+    **> Success
+ *> Starting service net.ra0: 
+    **> Success
+ *> Starting service bridge: 
+    **> Success
+ *> Starting service network: 
+  ra0: ...found old dhcpcd information, reusing
+  ra0: ...Trying to acquire IP via DHCP (try 0)
+  ra0: ...Received IP: 192.168.123.230
+  eth2: Setting secondary interface to 192.168.2.78
+    **> Success
+ *> Starting service dhcp-server: 
+  Starting DHCP server  **> Success
+ *> Starting service discover: 
+    **> Success
+ *> Starting service ntp: 
+    **> Success
+ *> Starting service ntpd: 
+    **> Success
+ *> Starting service sshd: 
+    **> Success
+ *> Starting service portmap: 
+    **> Success
+ *> Starting service vsftpd: 
+    **> Success
+ *> Starting service cleanup_disk: 
+    **> Success
+ *> Starting service data-repair: 
+    **> Success
+ *> Starting service postgresql: 
+    **> Success
+ *> Starting service crond: 
+  ... Creating crontab directory
+  ... Installing new root's crontab
+    **> Success
+ *> Starting service ipcorder:
+  Starting ipcorderPurger:
+  Starting /ipcorder/bin/ipcorderPurger...
+  Detaching to start /ipcorder/bin/ipcorderPurger...done.
+  OK
+  Starting ipcorderDBLogger:
+  Starting /ipcorder/bin/ipcorderDBLogger...
+  Detaching to start /ipcorder/bin/ipcorderDBLogger...done.
+  OK
+  Starting ipcorderEventer:
+  Starting /ipcorder/bin/ipcorderEventer...
+  Detaching to start /ipcorder/bin/ipcorderEventer...done.
+  OK
+  Starting ipcorderSessionServer:
+  Starting /ipcorder/bin/ipcorderSessionServer...
+  Detaching to start /ipcorder/bin/ipcorderSessionServer...done.
+  OK
+  retard_streamer disabled
+  OK
+  Starting ipcorderManager:
+  Starting /ipcorder/bin/ipcorderManager...
+  Detaching to start /ipcorder/bin/ipcorderManager...done.
+  OK
+  Starting ipcorderHttpd:
+  Starting /ipcorder/bin/ipcorderHttpd...
+  Detaching to start /ipcorder/bin/ipcorderHttpd...done.
+  OK
+  OK
+    **> Success
+ *> Starting service sanity_check:
+    **> Success
+ *> Starting service watchdog:
+    **> Success
+ *> Starting service kshell:
+  Starting /sbin/kshell...
+  Detaching to start /sbin/kshell...done.
+  Starting /etc/rc.d/993_kshell...
+  Detaching to start /etc/rc.d/993_kshell...done.
+    **> Success
+ *> Starting service upnp-presentation:
+    **> Success
+ *> Starting service updateLeds:
+    **> Success
+ *> Starting service postboot:
+    **> Success
+>>> All services up.
+INIT: Entering runlevel: 3
+
+myNetio login:
+
